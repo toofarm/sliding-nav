@@ -1,9 +1,14 @@
 import React, { FC } from 'react'
 import styles from './Navigation.module.css'
 
-const Navigation: FC = () => {
+type TProps = {
+    toggle: boolean;
+    setToggle: (order: boolean) => void;
+}
+
+const Navigation: FC<TProps> = ({ toggle, setToggle }) => {
     return (
-        <nav className={styles.main_nav}>
+        <nav className={`${toggle ? styles.show_menu : ''} ${styles.main_nav}`}>
             <ul className={styles.link_list}>
                 <li>
                     <a href="#">
@@ -25,6 +30,15 @@ const Navigation: FC = () => {
                         Link 4
                     </a>
                 </li>
+            </ul>
+            <ul
+                className={styles.toggle_btn}
+                tabIndex={0}
+                role='button'
+                onClick={() => setToggle(!toggle)}
+                onKeyPress={() => setToggle(!toggle)}>
+                <li></li>
+                <li></li>
             </ul>
         </nav>
     )

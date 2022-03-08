@@ -10,11 +10,28 @@
   margin: 0;
 }
 
+.hamburger_toggle {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger_toggle li {
+  margin-bottom: 0.35rem;
+  border: 2px solid #888;
+  border-radius: 25px;
+  width: 2rem;
+}
+
 @media screen and (max-width: 767px) {
   .app_header {
     padding: 0.5rem;
   }
   .app_header h1 {
     max-width: 50%;
+  }
+  .hamburger_toggle {
+    display: inline-block;
   }
 }
