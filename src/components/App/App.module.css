@@ -1,0 +1,17 @@
+.App {
+  text-align: left;
+}
+
+.App main {
+  padding: 3rem 1.5rem;
+}
+
+.App > main > h2 {
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .App main {
+    padding: 0.5rem;
+  }
+}

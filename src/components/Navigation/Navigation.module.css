@@ -1,0 +1,17 @@
+.link_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.link_list li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .main_nav {
+    transform: translateX(-200%);
+  }
+}
